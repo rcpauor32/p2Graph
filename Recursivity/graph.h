@@ -2,6 +2,7 @@
 #define	__GRAPH_H__
 
 #include "dynarray.h"
+#include "p2LinkedList.h"
 
 typedef unsigned int uint;
 
@@ -15,6 +16,7 @@ public:
 		DynArray<Vertex*> edges;
 
 		Vertex(const T& value) : data(value) {}
+
 		bool AddEdge(Vertex* other) {
 			bool is_once = false;
 			for (int i = 0; i < edges.n_size() && is_once == false; i++) {
@@ -27,6 +29,23 @@ public:
 			
 			return !is_once;
 		}
+
+		// CanReach() ---
+		const bool CanReach(const Vertex* dest, DynArray<const Vertex*>& visited) const {
+			if (this == dst)
+				return true;
+
+			visited.push_back(this);
+
+			for (const List<Vertex*>::node* item = edges[0]; item; item = item->next()) {
+				if (visited.find(item->data) == visited.n_size()) {
+					if (item->data->CanReach(dst, visited) == true) {
+						return true;
+					}
+				}
+			}
+			return false;
+		}
 	};
 
 public:
@@ -35,6 +54,7 @@ public:
 public:
 	Graph(){}
 	virtual ~Graph(){}
+
 
 	// Push() ---
 	Vertex* Push(const T& value = NULL) {

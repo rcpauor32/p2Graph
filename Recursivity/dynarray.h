@@ -24,7 +24,7 @@ public:
 
 	DynArray(uint n_elements) :
 		capacity(DYNARRAY_BLOCK_SIZE * (n_elements / DYNARRAY_BLOCK_SIZE + 1)),
-		num_elements(0)
+		num_elements(n_elements)
 	{
 		buffer = new T[capacity];
 	}
@@ -98,6 +98,18 @@ public:
 		delete[] buffer;
 		capacity--;
 		buffer = newbuffer;
+		num_elements--;
+	}
+
+	void pop_front() {
+		T* newbuffer = new T[capacity - 1];
+		for (int i = 1; i < num_elements; i++) {
+			newbuffer[i-1] = buffer[i];
+		}
+		delete[] buffer;
+		capacity--;
+		num_elements--;
+		buffer = newbuffer;
 	}
 
 	void pop(T object) {
@@ -125,6 +137,7 @@ public:
 	uint n_size() const {
 		return num_elements;
 	}
+
 	T& operator[](int value)const{
 		return buffer[value];
 

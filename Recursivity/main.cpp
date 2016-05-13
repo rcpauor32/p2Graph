@@ -18,6 +18,8 @@ int main() {
 	c->AddEdge(b);
 
 	printf("\n\nGraph1 Properties:\n  Size: %d\n  Empty: %s", graph1.size(), graph1.empty() ? "true :>" : "false :<");
+	printf("\n\nA->B? = %s", a->CanReach(d, a->edges) ? "true" : "false");
+	printf("\n\nA -> B -> C -> B = '%c'", a->edges[0]->edges[1]->edges[0]->edges[0]->data);
 
 	graph1.clear();
 

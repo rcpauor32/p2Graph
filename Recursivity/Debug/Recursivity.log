@@ -1,30 +1,11 @@
-﻿Build started 10/05/2016 10:31:36.
-     1>Project "c:\Users\pauor\documents\visual studio 2013\Projects\Recursivity\Recursivity\Recursivity.vcxproj" on node 2 (Build target(s)).
+﻿Build started 13/05/2016 12:07:26.
+     1>Project "C:\Users\pauor\Documents\GitHub\p2Graph\Recursivity\Recursivity.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
          C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt main.cpp
          main.cpp
-     1>c:\users\pauor\documents\visual studio 2013\projects\recursivity\recursivity\graph.h(20): warning C4018: '<' : signed/unsigned mismatch
-                 c:\users\pauor\documents\visual studio 2013\projects\recursivity\recursivity\graph.h(18) : while compiling class template member function 'bool Graph<char>::Vertex::AddEdge(Graph<char>::Vertex *)'
-                 c:\users\pauor\documents\visual studio 2013\projects\recursivity\recursivity\main.cpp(15) : see reference to function template instantiation 'bool Graph<char>::Vertex::AddEdge(Graph<char>::Vertex *)' being compiled
-                 c:\users\pauor\documents\visual studio 2013\projects\recursivity\recursivity\main.cpp(15) : see reference to class template instantiation 'Graph<char>::Vertex' being compiled
-     1>c:\users\pauor\documents\visual studio 2013\projects\recursivity\recursivity\dynarray.h(62): warning C4018: '<' : signed/unsigned mismatch
-                 c:\users\pauor\documents\visual studio 2013\projects\recursivity\recursivity\dynarray.h(57) : while compiling class template member function 'void DynArray<Graph<char>::Vertex *>::push_back(const T)'
-                 with
-                 [
-                     T=Graph<char>::Vertex *
-                 ]
-                 c:\users\pauor\documents\visual studio 2013\projects\recursivity\recursivity\graph.h(42) : see reference to function template instantiation 'void DynArray<Graph<char>::Vertex *>::push_back(const T)' being compiled
-                 with
-                 [
-                     T=Graph<char>::Vertex *
-                 ]
-                 c:\users\pauor\documents\visual studio 2013\projects\recursivity\recursivity\graph.h(33) : see reference to class template instantiation 'DynArray<Graph<char>::Vertex *>' being compiled
-                 c:\users\pauor\documents\visual studio 2013\projects\recursivity\recursivity\main.cpp(6) : see reference to class template instantiation 'Graph<char>' being compiled
-       Link:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"c:\users\pauor\documents\visual studio 2013\Projects\Recursivity\Debug\Recursivity.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"c:\users\pauor\documents\visual studio 2013\Projects\Recursivity\Debug\Recursivity.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"c:\users\pauor\documents\visual studio 2013\Projects\Recursivity\Debug\Recursivity.lib" /MACHINE:X86 Debug\main.obj
-         Recursivity.vcxproj -> c:\users\pauor\documents\visual studio 2013\Projects\Recursivity\Debug\Recursivity.exe
-     1>Done Building Project "c:\Users\pauor\documents\visual studio 2013\Projects\Recursivity\Recursivity\Recursivity.vcxproj" (Build target(s)).
+     1>c:\users\pauor\documents\github\p2graph\recursivity\main.cpp(21): error C2664: 'const bool Graph<char>::Vertex::CanReach(const Graph<char>::Vertex *,DynArray<const Graph<char>::Vertex *> &) const' : cannot convert argument 2 from 'DynArray<Graph<char>::Vertex *>' to 'DynArray<const Graph<char>::Vertex *> &'
+     1>Done Building Project "C:\Users\pauor\Documents\GitHub\p2Graph\Recursivity\Recursivity.vcxproj" (Build target(s)) -- FAILED.
 
-Build succeeded.
+Build FAILED.
 
-Time Elapsed 00:00:00.29
+Time Elapsed 00:00:00.14
